@@ -26,6 +26,10 @@ public class Goods {
             updateBackstagePass();
             return;
         }
+        if ("Sulfuras".equals(name)) {
+
+            return;
+        }
 
 
         updateRegularGoods();
