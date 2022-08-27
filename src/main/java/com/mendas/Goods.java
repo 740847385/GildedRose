@@ -19,28 +19,60 @@ public class Goods {
     public void updateByDay() {
 
         if ("Aged Brie".equals(name)) {
-            increaseQuality();
-            decreaseSellIn();
-            if (sellIn < 0) {
-                increaseQuality();
-
-            }
+            updateAgedbride();
             return;
         }
+        if ("Backstage pass".equals(name)) {
+            updateBackstagePass();
+            return;
+        }
+
+
+        updateRegularGoods();
+
+    }
+
+    private void updateBackstagePass() {
+        increaseQuality();
+        if (sellIn < 11) {
+            increaseQuality();
+
+        }
+        if (sellIn < 6) {
+            increaseQuality();
+
+        }
+        decreaseSellIn();
+
+        if (sellIn < 0) {
+            quality = 0;
+        }
+    }
+
+    private void updateAgedbride() {
+        increaseQuality();
+        decreaseSellIn();
+        if (sellIn < 0) {
+            increaseQuality();
+
+        }
+        return;
+    }
+
+    private void updateRegularGoods() {
         decreaseQuality();
         decreaseSellIn();
         if (sellIn < 0) {
             decreaseQuality();
         }
-
     }
+
 
     private void increaseQuality() {
         if (quality < 50) {
             quality = quality + 1;
         }
     }
-
 
 
     private void decreaseSellIn() {
