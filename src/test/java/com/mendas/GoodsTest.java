@@ -1,9 +1,8 @@
-package cn.gilded_rose;
+package com.mendas;
 
 
 import com.mendas.Goods;
-import com.sun.org.apache.bcel.internal.generic.NEW;
-import com.sun.source.tree.AssertTree;
+import com.mendas.RegularGoods;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -22,8 +21,8 @@ public class GoodsTest {
     void test() {
         double oldQuality = 5;
         int oldSellIn = 1;
-        Goods goods = new Goods("Regular", oldQuality, oldSellIn);
-        goods.updateByDay();
+        Goods goods = new RegularGoods("Regular", oldQuality, oldSellIn);
+          goods.updateByDay();
 
         double newQuality = goods.getQuality();
         int newSellIn = goods.getSellIn();
@@ -41,7 +40,7 @@ public class GoodsTest {
     void test2() {
         double oldQuality = 0;
         int oldSellIn = 1;
-        Goods goods = new Goods("Regular", oldQuality, oldSellIn);
+        Goods goods = new RegularGoods("Regular", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -60,7 +59,7 @@ public class GoodsTest {
     void test3() {
         double oldQuality = 5;
         int oldSellIn = 0;
-        Goods goods = new Goods("Regular", oldQuality, oldSellIn);
+        Goods goods = new RegularGoods("Regular", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -78,7 +77,7 @@ public class GoodsTest {
     void test4() {
         double oldQuality = 1;
         int oldSellIn = 0;
-        Goods goods = new Goods("Regular", oldQuality, oldSellIn);
+        Goods goods = new RegularGoods("Regular", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();

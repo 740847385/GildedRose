@@ -1,6 +1,5 @@
-package cn.gilded_rose;
+package com.mendas;
 
-import com.mendas.Goods;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,7 +16,7 @@ public class AgedBrieTest {
     void test() {
         double oldQuality = 45;
         int oldSellIn = 1;
-        Goods goods = new Goods("Aged Brie", oldQuality, oldSellIn);
+        Goods goods = new AgedBries("Aged Brie", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -35,7 +34,7 @@ public class AgedBrieTest {
     void test2() {
         double oldQuality = 50;
         int oldSellIn = 1;
-        Goods goods = new Goods("Aged Brie", oldQuality, oldSellIn);
+        Goods goods = new AgedBries("Aged Brie", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -53,7 +52,7 @@ public class AgedBrieTest {
     void test3() {
         double oldQuality = 45;
         int oldSellIn = 0;
-        Goods goods = new Goods("Aged Brie", oldQuality, oldSellIn);
+        Goods goods = new AgedBries("Aged Brie", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -70,7 +69,7 @@ public class AgedBrieTest {
     void test4() {
         double oldQuality = 49;
         int oldSellIn = 0;
-        Goods goods = new Goods("Aged Brie", oldQuality, oldSellIn);
+        Goods goods = new AgedBries("Aged Brie", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();

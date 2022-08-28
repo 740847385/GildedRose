@@ -1,6 +1,7 @@
-package cn.gilded_rose;
+package com.mendas;
 
 import com.mendas.Goods;
+import com.mendas.Sulfuras;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,7 +19,7 @@ public class SulfurasTest {
     void test() {
         double oldQuality = 5;
         int oldSellIn = 1;
-        Goods goods = new Goods("Sulfuras", oldQuality, oldSellIn);
+        Goods goods = new Sulfuras("Sulfuras", oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();

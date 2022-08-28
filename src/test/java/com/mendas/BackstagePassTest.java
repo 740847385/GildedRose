@@ -1,5 +1,6 @@
-package cn.gilded_rose;
+package com.mendas;
 
+import com.mendas.BackstagePass;
 import com.mendas.Goods;
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +18,7 @@ public class BackstagePassTest {
     void test() {
         double oldQuality = 45;
         int oldSellIn = 11;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -35,7 +36,7 @@ public class BackstagePassTest {
     void test2() {
         double oldQuality = 50;
         int oldSellIn = 11;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -52,7 +53,7 @@ public class BackstagePassTest {
     void test3() {
         double oldQuality = 45;
         int oldSellIn = 6;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -69,7 +70,7 @@ public class BackstagePassTest {
     void test4() {
         double oldQuality = 49;
         int oldSellIn = 6;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -86,7 +87,7 @@ public class BackstagePassTest {
     void test5() {
         double oldQuality = 45;
         int oldSellIn = 3;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -103,7 +104,7 @@ public class BackstagePassTest {
     void test6() {
         double oldQuality = 48;
         int oldSellIn = 3;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
@@ -114,13 +115,13 @@ public class BackstagePassTest {
     }
 
     /**
-     *过保 价值0~50任意值 when按天更新 then保质期减1 价值为0
+     * 过保 价值0~50任意值 when按天更新 then保质期减1 价值为0
      */
     @Test
     void test7() {
         double oldQuality = 48;
         int oldSellIn = 0;
-        Goods goods = new Goods("Backstage pass", oldQuality, oldSellIn);
+        Goods goods = new BackstagePass(oldQuality, oldSellIn);
         goods.updateByDay();
 
         double newQuality = goods.getQuality();
